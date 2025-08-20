@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #4f46e5; /* purple, optional */
+    --secondary-color: #7c3aed;
+    --error-color: #ef4444;
+    --success-bg: #e6c200; /* yellow highlights */
+    --success-text: #000;
+    --text-color: #1f2937; /* black text */
+    --light-bg: #f9f9f9;
+    --white: #fff;
+    --shadow-color: rgba(0,0,0,0.1);
+    --sage-green: #9caf88; /* sage green color */
+    --black-text: #1f2937; /* all former blue text to black */
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--sage-green);
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.nav-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--sage-green);
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+}
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+/* Buttons */
+.cta-button {
+    background: var(--sage-green);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .cta-button:active {
+        background-color: #d3d3d3; /* light grey on click */
+        color: var(--text-color);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+    }
+
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding: 0 20px;
+    background-color: var(--light-bg);
+}
+
+    .hero h2 {
+        font-size: 3.2rem;
+        color: var(--sage-green);
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-bottom: 20px;
+        color: var(--black-text);
+    }
+
+/* Features, Testimonials, Pricing */
+.features, .testimonials, .pricing {
+    padding: 80px 5%;
+    background-color: #f0f0f0;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--sage-green);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    text-align: center;
+    color: var(--black-text);
+    font-size: 1.1rem;
+}
+
+/* Cards */
+.features-grid, .pricing-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 40px;
+}
+
+.feature-card, .testimonial-card, .pricing-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .feature-card:hover, .testimonial-card:hover, .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+.feature-icon {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    color: var(--sage-green);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--black-text);
+}
+
+/* Organize Your Tasks */
+.organize-tasks {
+    color: var(--sage-green);
+    font-size: 1.3rem;
+}
+
+/* Happy Users Section */
+.happy-users {
+    background-color: var(--sage-green); /* sage green background */
+    padding: 80px 5%;
+}
+
+    .happy-users h2 {
+        color: var(--black-text); /* heading black */
+        font-size: 2.8rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .happy-users p,
+    .happy-users .testimonial-card p {
+        color: var(--black-text); /* all text black */
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .happy-users .testimonial-card {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px var(--shadow-color);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .happy-users .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+/* Contact Section & Footer */
+#contact, footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 5%;
+}
+
+    #contact h3, footer h3 {
+        color: var(--sage-green);
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    #contact a, footer a {
+        color: var(--sage-green);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        #contact a:hover, footer a:hover {
+            color: var(--primary-color);
+        }
+
+    #contact .social-links a, footer .social-links a {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        margin-right: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+        #contact .social-links a:hover, footer .social-links a:hover {
+            background-color: var(--success-bg);
+        }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin: 15px 0;
+    }
+}

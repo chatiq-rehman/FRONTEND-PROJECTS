@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="site.css" rel="stylesheet" /> 
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Blog</h1>
+    </header>
+
+    <div class="controls">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="Tech">Tech</button>
+        <button class="filter-btn" data-category="Travel">Travel</button>
+        <button class="filter-btn" data-category="Food">Food</button>
+        <input type="text" id="searchInput" placeholder="Search posts...">
+    </div>
+
+    <div id="blogGrid" class="grid"></div>
+    <div class="no-posts" id="noPosts" style="display:none;">No posts found</div>
+
+    <div class="pagination">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="site.js"></script> 
+</body>
+</html>
